@@ -12,10 +12,6 @@ public class Prestamo {
     public LinkedList<Libro> librosPrestados;
     public LinkedList<Estudiante> estudiantes;
 
-    public Prestamo() {
-
-    }
-
     public Prestamo(String codigo, LocalDate fechaPrestamo, LocalDate fechaEntrega) {
         this.codigo = codigo;
         this.fechaPrestamo = fechaPrestamo;
