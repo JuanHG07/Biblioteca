@@ -23,7 +23,8 @@ public class Biblioteca {
         return estudiante;
     }
 
-    public static Bibliotecario crearBibliotecario(String nombre, String cedula, String telefono, String correo, int salario, int añosAntiguedad) {
+    public static Bibliotecario crearBibliotecario(String nombre, String cedula, String telefono, String correo,
+            int salario, int añosAntiguedad) {
         Bibliotecario bibliotecario = new Bibliotecario(nombre, cedula, telefono, correo, salario, añosAntiguedad);
         return bibliotecario;
     }
@@ -90,7 +91,8 @@ public class Biblioteca {
         for (int i = 0; i < estudiantes.size(); i++) {
             Estudiante estudiante = estudiantes.get(i);
             int contador = 0;
-            for (Prestamo prestamo : estudiante.getPrestamos()) {
+            for (@SuppressWarnings("unused")
+            Prestamo prestamo : estudiante.getPrestamos()) {
                 contador += 1;
             }
             if (contador > mayor) {
@@ -110,4 +112,5 @@ public class Biblioteca {
         }
         return dineroTotalRecaudado;
     }
+
 }

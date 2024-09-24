@@ -1,19 +1,20 @@
 package co.edu.uniquindio.poo;
 
 public class Libro {
+    public String nombre;
     public String codigo;
     public String isbn;
-    public String nombre;
     public String autor;
     public String editorial;
     public String fecha;
     public int unidadesDisponibles;
     public Estado estado;
 
-    public Libro(String codigo, String isbn, String nombre, String autor, String editorial, String fecha, int unidadesDisponibles) {
+    public Libro(String nombre, String codigo, String isbn, String autor, String editorial, String fecha,
+            int unidadesDisponibles) {
+        this.nombre = nombre;
         this.codigo = codigo;
         this.isbn = isbn;
-        this.nombre = nombre;
         this.autor = autor;
         this.fecha = fecha;
         this.unidadesDisponibles = unidadesDisponibles;
@@ -75,14 +76,6 @@ public class Libro {
         this.unidadesDisponibles = unidadesDisponibles;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public Estado getEstado() {
         return estado;
     }
@@ -91,10 +84,19 @@ public class Libro {
         this.estado = estado;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     @Override
     public String toString() {
-        return "Libro [codigo=" + codigo + ", isbn=" + isbn + ", nombre=" + nombre + ", autor=" + autor + ", editorial="
+        return "Libro [nombre=" + nombre + ", codigo=" + codigo + ", isbn=" + isbn + ", autor=" + autor + ", editorial="
                 + editorial + ", fecha=" + fecha + ", unidadesDisponibles=" + unidadesDisponibles + ", estado=" + estado
                 + "]";
     }
+
 }
